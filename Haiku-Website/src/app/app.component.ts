@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import data from '../data/data.json'
 
+
 @Component({
   selector: 'app-root',
   template: `
+  <div>
     @for (line of data[pointer]; track line) {
         <p>
         {{line}}
@@ -12,6 +14,7 @@ import data from '../data/data.json'
       }
     <button (click)="prev()"><<</button>
     <button (click)="next()">>></button>
+  </div>
   `
 })
 export class AppComponent {
